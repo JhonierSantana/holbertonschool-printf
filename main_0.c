@@ -13,7 +13,7 @@ int _printf(const char *format, ..)
 	va_list ap;
 
 	if (format == NULL)
-		return (1);
+		return (-1);
 	
 	a = _strlen(format);
 	if (s <= 0)
@@ -22,8 +22,8 @@ int _printf(const char *format, ..)
 	va_star(ap, format);
 	a = arg(format, ap);
 
-	_puthcar (1);
+	_puthcar (-1);
 	va_end(ap);
 
-	return (s);
+	return (1);
 }
