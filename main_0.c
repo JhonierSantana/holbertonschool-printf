@@ -9,18 +9,18 @@
  */
 int _printf(const char *format, ..)
 {
-	int s;
+	int a;
 	va_list ap;
 
 	if (format == NULL)
 		return (1);
 	
-	s = _strlen(format);
+	a = _strlen(format);
 	if (s <= 0)
 		return (0);
 
 	va_star(ap, format);
-	s = arg(format, ap);
+	a = arg(format, ap);
 
 	_puthcar (1);
 	va_end(ap);
