@@ -13,7 +13,7 @@ int _printf(const char *format, ..)
 	va_list ap;
 
 	if (format == NULL)
-		return (-1);
+		return (1);
 	
 	s = _strlen(format);
 	if (s <= 0)
