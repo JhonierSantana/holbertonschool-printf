@@ -22,7 +22,7 @@ int _printf(const char *format, ..)
 	va_star(ap, format);
 	s = arg(format, ap);
 
-	_puthcar (-1);
+	_puthcar (1);
 	va_end(ap);
 
 	return (s);
