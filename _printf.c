@@ -10,11 +10,9 @@ int _printf(const char *format, ...)
 
 	va_start(elements, format);
 	
-	if (format == NULL)
-		return ('\0');
-	
         while (format[a])
         {
+	if (format[a] != '%')
             a++;
             _putchar(len);
             len = *(format + a - 1);
