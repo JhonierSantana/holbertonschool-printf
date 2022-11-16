@@ -12,7 +12,6 @@ int _printf(const char *format, ...)
 	
         while (format[a])
         {
-	if (format[a] != '%')
             a++;
             _putchar(len);
             len = *(format + a - 1);
