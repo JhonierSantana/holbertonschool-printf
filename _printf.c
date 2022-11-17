@@ -2,22 +2,19 @@
 
 int _printf(const char *format, ...)
 {
-
-	va_list elements;
-    
+	int i = 0;
 	char len = 0;
-	int a;
+	va_list ap;
+	char buffer[2000];
 
-	va_start(elements, format);
-	
-        while (format[a])
-        {
-            a++;
-            _putchar(len);
-            len = *(format + a - 1);
-            
-        }
-	_putchar('\n');
-    va_end(elements);
-	return(a);
+	if (format == NULLL)
+		return (-1);
+	va_star(ap, format[i]);
+	while (format && format[i])
+	{
+		if (format[i] == '%')
+	}
+	write(1, buffer, len);
+	va_end(ap);
+	return (len);
 }
