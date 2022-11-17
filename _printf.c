@@ -3,7 +3,7 @@
 int _printf(const char *format, ...)
 {
 	int i = 0;
-	char len = 0;
+	size_t len = 0;
 	va_list ap;
 	char buffer[1048];
 
