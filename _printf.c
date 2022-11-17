@@ -13,6 +13,10 @@ int _printf(const char *format, ...)
 	while (format && format[i])
 	{
 		if (format[i] == '%')
+		{
+			buffer[len] = format[i];
+			i++;
+		}	
 	}
 	write(1, buffer, len);
 	va_end(ap);
