@@ -18,16 +18,6 @@
 	buffer[count] = format[a];  
 	count += 1;
 	}
-      
-      else
-	
-	{
-	  
-	buffer[count] = format[a];
-	  
-	count += 1;
-	
-	}
 	a++;
 	}
   
