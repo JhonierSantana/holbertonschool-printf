@@ -1,24 +1,37 @@
 #include "main.h"
 
-int _printf(const char *format, ...)
+ int _printf (const char *format, ...) 
 {
-	int i = 0;
-	size_t len = 0;
 	va_list ap;
-	char buffer[1048];
+	char buffer[2000];
+	int a = 0;
+	int count = 0;
+	va_start (ap, format);
 
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-		return (-1);
-	va_start(ap, format);
-	while (format && format[i])
+	if (!format)
+		exit (1);
+	while (format && format[a])
+    	{
+	if (format[a] != '%')
 	{
-		if (format[i] != '%')
-		{
-			buffer[len] = format[i];
-			len += 1;
-		}	
+
+	buffer[count] = format[a];  
+	count += 1;
 	}
-	write(1, buffer, len);
-	va_end(ap);
-	return (len);
+      
+      else
+	
+	{
+	  
+	buffer[count] = format[a];
+	  
+	count += 1;
+	
+	}
+	a++;
+	}
+  
+	write (1, buffer, count);
+	return (a); 
+	va_end (ap);
 }
