@@ -1,32 +1,37 @@
 #include "main.h"
 
- int _printf (const char *format, ...) 
+int _printf(const char *format, ...)
 {
 	va_list ap;
-	char buffer[2000];
+	
+	char *buffer;
 	int a = 0;
 	int count = 0;
+	int (*cases_print)(va_list, char *buffer, int len); // funcion de la estructura, se esta llamando
+	
 	va_start (ap, format);
-
+	
 	if (!format)
-		exit (1);
-	while (format && format[a])
-    	{
-	if (format[a] != '%')
-	{
+		exit(1);
 
-	buffer[count] = format[a];  
-	count += 1;
-	}
-	else
+   buffer = malloc(5000);
+
+	while (format[a])
 	{
-	buffer[count] = format[a];
-        count += 1;
+		if (format[a] != '%')
+		{
+	        count++;
+	        count = _putchar(format[a]); /* -> funciona con esto pero sale un porcentaje en todo */
+	        
+	     /*   buffer = realloc(buffer, count);
+	        buffer[a] = format[a]; */
+		}
+		// else donde debemos llamar a la estructura "cases_print" y darle un = que vendria ser llamar la funcion get_prints_cases del archivo get func que contiene los casos
+
+	    
+	  a++;
 	}
-	a++;
-	}
-  
-	write (1, buffer, count);
-	return (a); 
-	va_end (ap);
+	return (count);
+	free(buffer);
+	va_end(ap);
 }
