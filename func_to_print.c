@@ -1,13 +1,27 @@
-// aca vendra cada proceso de cada caso, por ejemplo el proceso del dato a que queremos imprimir
+#include "main.h"
 
-/*#include "main.h"
-
-int print_c(va_list ap, char *len) // nombre de la funcion llamada en get_func
+int print_c(va_list ap, char *buff, int len)
 {
-    char *c; // puntero que se utiliza en el archivo get_fun "c"
-    for (c = 0; c < len; c++) // proceso que claramente esta mal, pero ahi vendria el proceso a que funcione
-        c = c;
-        
-    return (0);
+	char *c;
+
+	c = malloc((sizeof(char) + 1));
+	c[0] = va_arg(ap, int);
+	len = replace(buff, c, len);
+	free(c);
+	return (len);
 }
-*/
+
+int print_s(va_list ap, char *buff, int len)
+{
+    char *s;
+	char *a;
+	int len_s;
+
+	a = va_arg(ap, char*);
+	len_s = _strlen(a);
+	s = malloc((sizeof(char) * len_s) + 1);
+	_strcpy(s, a);
+	len = replace(buff, s, len);
+	free(s);
+	return (len);
+}
