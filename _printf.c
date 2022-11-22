@@ -28,6 +28,11 @@ int _printf(char *format, ...)
 		        len = cases_print(ap, &buffer[len], len);
 				a++;
 		    }
+		    else
+		    {
+			buffer[len] = format[a];
+                        len += 1;
+		    }
 		}
 	  a++;
 	}
