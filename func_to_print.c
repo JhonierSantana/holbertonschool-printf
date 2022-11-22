@@ -2,6 +2,8 @@
 
 int print_c(va_list ap, char *buff, int len)
 {
+	char *c;
+
 	c = malloc((sizeof(char) + 1));
 	if (c == NULL)
 	    exit(1);
