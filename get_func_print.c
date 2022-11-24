@@ -13,5 +13,5 @@ int (*get_print_cases(char *arg))(va_list, char *, int)
 			return ((format[i].cases_print));
 		i++;
 	}
-	return (NULL);
+	return (1);
 }
