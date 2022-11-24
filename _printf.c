@@ -14,7 +14,7 @@ int _printf(char *format, ...)
 			|| (format[0] == '\\' && format[1] == '\0'))
 		return (-1);
 
-	while (format[a])
+	while (format && format[a])
 	{
 		if (format[a] != '%')
 		{
