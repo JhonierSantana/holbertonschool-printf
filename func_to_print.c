@@ -37,7 +37,6 @@ int print_s(va_list ap, char *buff, int len)
 int percent_case(va_list ap, char *buff, int len)
 {
 	char *p;
--
 	p = malloc((sizeof(char) + 1));
 	if (p == NULL)
 		return (1);
