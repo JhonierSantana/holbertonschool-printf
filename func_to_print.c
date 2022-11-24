@@ -6,7 +6,7 @@ int print_c(va_list ap, char *buff, int len)
 
 	c = malloc((sizeof(char) + 1));
 	if (c == NULL)
-	    return (NULL);
+	    return (len);
 	c[0] = va_arg(ap, int);
 	if (c[0] == 0)
 		exit (1);
