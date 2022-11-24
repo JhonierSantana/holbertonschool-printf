@@ -27,7 +27,7 @@ int print_s(va_list ap, char *buff, int len)
 	len_s = _strlen(a);
 	s = malloc((sizeof(char) * len_s) + 1);
 	if (s == NULL)
-		return (len);
+		return (1);
 	_strcpy(s, a);
 	len = replace(buff, s, len);
 	free(s);
