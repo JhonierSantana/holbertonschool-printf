@@ -2,9 +2,9 @@
 
 int _printf(char *format, ...)
 {
-	va_list ap;
 	size_t len = 0;
 	char buffer[2000];
+	va_list ap;
 	int a = 0;
 	int (*cases_print)(va_list, char *, int ); 
 
