@@ -15,7 +15,7 @@ int _printf(char *format, ...)
 	if (!format)
 		exit(1);
 
-	while (format[a])
+	while (format && format[a])
 	{
 		if (format[a] != '%')
 		{
