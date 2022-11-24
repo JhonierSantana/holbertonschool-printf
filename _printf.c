@@ -7,15 +7,13 @@ int _printf(char *format, ...)
 	char buffer[2000];
 	int a = 0;
 	int (*cases_print)(va_list, char *, int ); 
-	if (format == NULL || (format[0] == '%' && format[1] == '\0')
-			|| (format[0] == '\\' && format[1] == '\0'))
-	
+
 	va_start (ap, format);
 	
 	if (!format)
 		exit(1);
 
-	while (format && format[a])
+	while (format[a])
 	{
 		if (format[a] != '%')
 		{
