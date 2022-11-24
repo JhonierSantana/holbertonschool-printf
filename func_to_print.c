@@ -10,6 +10,7 @@ int print_c(va_list ap, char *buff, int len)
 	c[0] = va_arg(ap, int);
 	if (c[0] == 0)
 		exit (1);
+	c[1] = '\0';
 	len = replace(buff, c, len);
 	free(c);
 	return (len);
@@ -39,7 +40,7 @@ int percent_case(va_list ap, char *buff, int len)
 	char *p;
 	p = malloc((sizeof(char) + 1));
 	if (p == NULL)
-		return (1);
+		 exit(1);
 	p[0] = va_arg(ap, int);
 	p[0] = '%';
 	len = replace(buff, p, len);
