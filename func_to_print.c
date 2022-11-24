@@ -23,7 +23,7 @@ int print_s(va_list ap, char *buff, int len)
 
 	a = va_arg(ap, char*);
 	if (a == NULL)
-		    exit(1);
+		    a = "(null)";
 	len_s = _strlen(a);
 	s = malloc((sizeof(char) * len_s) + 1);
 	if (s == NULL)
