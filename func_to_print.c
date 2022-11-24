@@ -9,7 +9,8 @@ int print_c(va_list ap, char *buff, int len)
 	    return (len);
 	c[0] = va_arg(ap, int);
 	if (c[0] == 0)
-		return (1);
+		len += 1;
+	c[1] = '\0';
 	len = replace(buff, c, len);
 	free(c);
 	return (len);
