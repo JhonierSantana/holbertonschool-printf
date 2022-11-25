@@ -28,3 +28,21 @@ i++;
 *(dest + i) = '\0';
 return (dest);
 }
+
+void rev_string(char *s)
+{
+	int i;
+	int j;
+	char c;
+
+	i = _strlen(s) - 1;
+	j = 0;
+	while (i >= j)
+	{
+		c = *(s + j);
+		*(s + j) = *(s + i);
+		*(s + i) = c;
+		i = i - 1;
+		j++;
+	}
+}
