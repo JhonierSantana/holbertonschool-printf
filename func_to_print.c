@@ -47,3 +47,47 @@ int percent_case(va_list ap, char *buff, int len)
 	free(p);
 	return (len);
 }
+
+int print_d(va_list ap, char *buff, int len)
+{
+	char *s;
+	char *a;
+	int s_len, num;
+
+	num = va_arg(ap, int);
+	a = malloc(sizeof(char) * 35);
+	if (a == NULL)
+		return (1);
+	a = _itoa(num, a, 10);
+	s_len = _strlen(a);
+	s = malloc((sizeof(char) * s_len) + 1);
+	if (s == NULL)
+		return (1);
+	_strcpy(s, a);
+	len = replace(buff, s, len);
+	free(s);
+	free(a);
+	return (len);
+}
+
+int print_i(va_list ap, char *buff, int len)
+{
+	char *s;
+	char *a;
+	int s_len, num;
+
+	num = va_arg(ap, int);
+	a = malloc(sizeof(char) * 35);
+	if (a == NULL)
+		return (1);
+	a = _itoa(num, a, 2);
+	s_len = _strlen(a);
+	s = malloc((sizeof(char) * s_len) + 1);
+	if (s == NULL)
+		return (1);
+	_strcpy(s, a);
+	len = replace(buff, s, len);
+	free(s);
+	free(a);
+	return (len);
+}
