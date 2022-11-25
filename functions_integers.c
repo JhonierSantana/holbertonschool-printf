@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _itoa - Converts an intiger to specified argument
+ * _itoa - Converts an intiger to string
  * @num: intiger to convert
- * @s: Pointer to save int into
+ * @s: Pointer 
  * @base: Base to convert int
  * Return: Pointer to s
  */
