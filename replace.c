@@ -1,13 +1,12 @@
 #include "main.h"
 
 /**
- * replace - puts s string on pointer buffer
- * @buffer: Destination buffer
- * @s: String to put
- * @print_len: Final position
- * Return: Final position
- */
-
+* replace - puts s string on pointer buffer
+* @buffer: Destination buffer
+* @s: String to put
+* @print_len: Final position
+* Return: Final position
+*/
 int replace(char *buffer, char *s, int len)
 {
 	int i = 0;
